@@ -76,4 +76,6 @@ RUN git submodule update --init --recursive && \
     qmake -makefile -o Makefile DeepLabel.pro && \
     make -j8 
 
+RUN ln -sf /root/deeplabel/release/deeplabel /usr/bin/deeplabel
+
 WORKDIR /root
